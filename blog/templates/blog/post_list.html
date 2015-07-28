@@ -1,10 +1,15 @@
 <html>
-	<head>
-		<title>The Muslim Village</title>
-	</head>
 	<body>
-		<p> Hello There </P>
-		<p> Let me say that I am really that I have started this. I hope it continues for many years to come and stuff</p>
+	<div>
+		<h1><a href="/">Django Girls Blog</a></h1>
+	</div>
+
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
 	</body>
-	
 </html>
